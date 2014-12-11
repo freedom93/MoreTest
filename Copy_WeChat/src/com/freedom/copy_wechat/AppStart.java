@@ -11,12 +11,11 @@ public class AppStart extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_start);
-		
+		//延迟一秒跳转  
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				Intent intent = new Intent(AppStart.this, Welcome.class);
-				startActivity(intent);
+				startActivity(new Intent(AppStart.this, Welcome.class));
 				AppStart.this.finish();
 			}
 		}, 1000);
