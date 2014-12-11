@@ -21,7 +21,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.freedom.copy_wechat.Welcome"  android:theme="@style/Anim_style2"  />
+        <activity 
+            android:name="com.freedom.copy_wechat.WelcomeLogin"  
+            android:theme="@style/Anim_style2"  
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity 
+            android:name="com.freedom.copy_wechat.LoadingLogin"  
+            android:theme="@android:style/Theme.NoTitleBar" 
+ 			android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity 
+            android:name="com.freedom.copy_wechat.Welcomes"  
+            android:theme="@android:style/Theme.NoTitleBar" 
+ 			android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity 
+            android:name="com.freedom.copy_wechat.Register"  
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity 
+            android:name="com.freedom.copy_wechat.WeChatMain" 
+            android:theme="@style/Anim_style2" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/> 
       
     </application>
 

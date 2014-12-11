@@ -15,7 +15,7 @@ public class AppStart extends Activity {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				startActivity(new Intent(AppStart.this, Welcome.class));
+				startActivity(new Intent(AppStart.this, WelcomeLogin.class));
 				AppStart.this.finish();
 			}
 		}, 1000);

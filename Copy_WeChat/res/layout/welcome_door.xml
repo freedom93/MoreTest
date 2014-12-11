@@ -27,7 +27,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="35dp"
         android:gravity="center"
-        android:text=" \n \n微信，是一个生活方式\n \n "
+        android:text=" \n微信 ,不仅仅是一个聊天工具\n更是是一个生活方式"
         android:textColor="#fff"
         android:textSize="22sp" />
 
