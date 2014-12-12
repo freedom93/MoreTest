@@ -51,7 +51,7 @@ public class WelcomeLogin extends Activity {
 			new AlertDialog.Builder(WelcomeLogin.this)
 					.setIcon(
 							getResources().getDrawable(
-									R.drawable.login_error_icon))
+									R.drawable.error_icon))
 					.setTitle("登录错误").setMessage("微信帐号或者密码不能为空，\n请输入后再登录！")
 					.create().show();
 		} else {
@@ -59,15 +59,17 @@ public class WelcomeLogin extends Activity {
 			new AlertDialog.Builder(WelcomeLogin.this)
 					.setIcon(
 							getResources().getDrawable(
-									R.drawable.login_error_icon))
+									R.drawable.error_icon))
 					.setTitle("登录失败").setMessage("微信帐号或者密码不正确，\n请检查后重新输入！")
 					.create().show();
 		}
 	}
 
-	public void login_pw(View v) { // 忘记密码按钮
-		Uri uri = Uri.parse("http://www.hao123.com");
-		startActivity(new Intent(Intent.ACTION_VIEW, uri));
+	public void login_forget_pwd(View v) { // 忘记密码按钮
+		Toast.makeText(getApplicationContext(), "忘记密码",
+				Toast.LENGTH_SHORT).show();
+//		Uri uri = Uri.parse("http://www.hao123.com");
+//		startActivity(new Intent(Intent.ACTION_VIEW, uri));
 		// startActivity(new Intent().setClass(WelcomeLogin.this,Welcomes.class));
 	}
 

@@ -78,7 +78,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:background="#0000"
-            android:onClick="login_pw"
+            android:onClick="login_forget_pwd"
             android:text="忘记密码?"
             android:textColor="#00f"
             android:textSize="16sp" />

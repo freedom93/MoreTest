@@ -12,17 +12,17 @@
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/title_bar" >
-
-        <TextView
+     <Button
             android:id="@+id/register_reback_btn"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:onClick="login_back"
+            android:background="@drawable/title_bar"
+            android:onClick="register_back"
             android:text="返回"
             android:textColor="#fff"
             android:textSize="14sp" />
+
 
     </RelativeLayout>
 
@@ -44,7 +44,7 @@
         android:id="@+id/register_passwd_edit"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_user_edit"
+        android:layout_below="@id/register_user_edit"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
@@ -54,11 +54,25 @@
         android:singleLine="true"
         android:textColor="#000"
         android:textSize="15sp" />
-
+    
+	<EditText
+        android:id="@+id/register_pwd_comfirm_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_passwd_edit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/login_editbox"
+        android:hint="重复确认密码"
+        android:password="true"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="15sp" />
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_passwd_edit"
+        android:layout_below="@+id/register_pwd_comfirm_edit"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp" >
 
@@ -69,12 +83,13 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/btn_style_green"
             android:gravity="center"
-            android:onClick="welcome_register"
+            android:onClick="register"
             android:paddingLeft="122dp"
             android:paddingRight="122dp"
             android:text="注册"
             android:textColor="#ffffff"
             android:textSize="18sp" />
+        
     </RelativeLayout>
     
 
