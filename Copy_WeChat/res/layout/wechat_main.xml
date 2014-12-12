@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:background="#eee"
     android:orientation="vertical" >
-
+     
     <RelativeLayout
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
@@ -43,13 +43,13 @@
                     android:clickable="true"
                     android:scaleType="matrix"
                     android:src="@drawable/tab_weixin_pressed" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="微信"
                     android:textColor="#fff"
                     android:textSize="12sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -93,7 +93,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="朋友们"
+                    android:text="发现"
                     android:textColor="#fff"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -111,12 +111,12 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:scaleType="matrix"
-                    android:src="@drawable/tab_settings_normal" />
+                    android:src="@drawable/mm_title_btn_contact_normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="设置"
+                    android:text=" 我  "
                     android:textColor="#fff"
                     android:textSize="12sp" />
             </LinearLayout>

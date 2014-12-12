@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+       
+         
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="WeChat"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+       
+         <Button
+            android:id="@+id/right_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/actionbar_add_icon"
+            android:onClick="btnmainright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#fcfcfc"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="startchat" >
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:src="@drawable/test_pic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/head"
+            android:padding="10dp"
+            android:text="Anna"
+            android:textSize="18sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:text="12:12"
+            android:textColor="#666" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/head"
+            android:padding="10dp"
+            android:text="Just be better!"
+            android:textColor="#666" />
+    </RelativeLayout>
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="0.5dp"
+        android:background="#fcfcfc"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="startchat" >
+
+        <ImageView
+            android:id="@+id/head1"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:src="@drawable/test_pic1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/head1"
+            android:padding="10dp"
+            android:text="Jason"
+            android:textSize="18sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:text="08:26"
+            android:textColor="#666" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/head1"
+            android:padding="10dp"
+            android:text="Nothing for nothing!"
+            android:textColor="#666" />
+    </RelativeLayout>
+</LinearLayout>
