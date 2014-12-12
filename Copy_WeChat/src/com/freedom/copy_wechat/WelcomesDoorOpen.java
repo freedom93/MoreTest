@@ -67,7 +67,7 @@ public class WelcomesDoorOpen extends Activity {
 				startActivity(new Intent(WelcomesDoorOpen.this, WeChatMain.class));
 				WelcomesDoorOpen.this.finish();
 			}
-		}, 2300);
+		}, 2500);
 	}
 
 }

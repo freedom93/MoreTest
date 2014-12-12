@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="35dp"
         android:gravity="center"
-        android:text="\n微信\n超过1亿人使用的手机应用"
+        android:text="\n超过1亿人使用的手机应用"
         android:textColor="#fff"
         android:textSize="22sp" />
 

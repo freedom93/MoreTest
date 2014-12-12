@@ -3,12 +3,10 @@ package com.freedom.copy_wechat;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class WelcomeLogin extends Activity {
@@ -21,21 +19,13 @@ public class WelcomeLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcome_login);
 
-		ImageView top_left = (ImageView) findViewById(R.id.left_icon);
-		top_left.setImageResource(R.drawable.actionbar_icon);
-		TextView top_right = (TextView) findViewById(R.id.right_text);
-		top_right.setText(R.string.other_acount);
-		top_right.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Toast.makeText(getApplicationContext(), "切换账号",
-						Toast.LENGTH_SHORT).show();
-			}
-		});
-
 		mUser = (EditText) findViewById(R.id.login_user_edit);
 		mPassword = (EditText) findViewById(R.id.login_passwd_edit);
+	}
+	
+	public void other_acount(View v){
+		Toast.makeText(getApplicationContext(), "切换账号",
+				Toast.LENGTH_SHORT).show();
 	}
 
 	public void welcome_login(View v) {
@@ -43,8 +33,8 @@ public class WelcomeLogin extends Activity {
 				&& "123".equals(mPassword.getText().toString())) {
 			startActivity(new Intent().setClass(WelcomeLogin.this,
 					LoadingLogin.class));
-			Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_SHORT)
-					.show();
+//			Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_SHORT)
+//					.show();
 
 		} else if ("".equals(mUser.getText().toString())
 				|| "".equals(mPassword.getText().toString())) {
