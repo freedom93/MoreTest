@@ -183,7 +183,7 @@ public class WeChatMain2 extends Activity implements OnViewChangeListener, OnCli
 		h1.setTxPath(R.drawable.headshow10+"");
 		h1.setName1("疯女");
 		h1.setLastContent("正常人不会懂疯子的快乐！");
-		h1.setLastTime(" 18:00");
+		h1.setLastTime("下午 18:00");
 		
 		HuiHua h2 = new HuiHua();
 		h2.setTxPath(R.drawable.headshow3+"");
