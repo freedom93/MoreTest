@@ -15,6 +15,7 @@ public class MyFrame extends FrameLayout {
 	 */
 	private int downX;
 	private boolean isSlide = false;
+
 	public MyFrame(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
@@ -25,10 +26,10 @@ public class MyFrame extends FrameLayout {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN: 
+		case MotionEvent.ACTION_DOWN:
 			System.out.println("子类点击onTouchEvent");
 			break;
-		case MotionEvent.ACTION_MOVE: 
+		case MotionEvent.ACTION_MOVE:
 			System.out.println("子类滑动onTouchEvent");
 			break;
 		case MotionEvent.ACTION_UP:
@@ -44,10 +45,10 @@ public class MyFrame extends FrameLayout {
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
 		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN: 
+		case MotionEvent.ACTION_DOWN:
 			System.out.println("子类点击dispatchTouchEvent");
 			break;
-		case MotionEvent.ACTION_MOVE: 
+		case MotionEvent.ACTION_MOVE:
 			System.out.println("子类滑动dispatchTouchEvent");
 			break;
 		case MotionEvent.ACTION_UP:
@@ -56,5 +57,5 @@ public class MyFrame extends FrameLayout {
 		}
 		return super.dispatchTouchEvent(event);
 	}
-	
+
 }

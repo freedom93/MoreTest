@@ -15,8 +15,8 @@ import com.freedom.copy_wechat.R;
 public class ContactAdapter extends BaseAdapter {
 	private Context context;
 	private ArrayList<ContactP> list = new ArrayList<ContactP>();
-	
-	public ContactAdapter(Context context,ArrayList<ContactP> list){
+
+	public ContactAdapter(Context context, ArrayList<ContactP> list) {
 		this.context = context;
 		this.list = list;
 	}
@@ -42,24 +42,25 @@ public class ContactAdapter extends BaseAdapter {
 	public View getView(int position, View view, ViewGroup parent) {
 		ContactP hh = list.get(position);
 		H h = null;
-		if(view==null){
+		if (view == null) {
 			h = new H();
-			view = LayoutInflater.from(context).inflate(R.layout.contacts, parent, false);
-			h.pic = (ImageView)view.findViewById(R.id.tx1);
-			h.name = (TextView)view.findViewById(R.id.tx2);
-			
+			view = LayoutInflater.from(context).inflate(R.layout.contacts,
+					parent, false);
+			h.pic = (ImageView) view.findViewById(R.id.tx1);
+			h.name = (TextView) view.findViewById(R.id.tx2);
+
 			view.setTag(h);
-		}else{
-			h = (H)view.getTag();
+		} else {
+			h = (H) view.getTag();
 		}
-		
+
 		h.pic.setImageResource(Integer.parseInt(hh.getTxPath()));
 		h.name.setText(hh.getName());
-		
+
 		return view;
 	}
 
-	class H{
+	class H {
 		ImageView pic;
 		TextView name;
 	}

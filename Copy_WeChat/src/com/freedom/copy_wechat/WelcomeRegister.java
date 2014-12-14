@@ -29,42 +29,33 @@ public class WelcomeRegister extends Activity {
 		String pwd = mPassword.getText().toString().trim();
 		String cPwd = mComfirmPassword.getText().toString().trim();
 
-		if(11 == phone.length() && phone.matches("[0-9]+") && phone.startsWith("13")
-				&& !pwd.equals("") && pwd.equals(cPwd)){
+		if (11 == phone.length() && phone.matches("[0-9]+")
+				&& phone.startsWith("13") && !pwd.equals("")
+				&& pwd.equals(cPwd)) {
 			Toast.makeText(getApplicationContext(), "注册成功", Toast.LENGTH_SHORT)
-			.show();
+					.show();
 			startActivity(new Intent().setClass(WelcomeRegister.this,
 					WelcomeLogin.class));
 		}
-		if("".equals(phone) || "".equals(pwd)) {
+		if ("".equals(phone) || "".equals(pwd)) {
 			new AlertDialog.Builder(WelcomeRegister.this)
-					.setIcon(
-							getResources().getDrawable(
-									R.drawable.error_icon))
+					.setIcon(getResources().getDrawable(R.drawable.error_icon))
 					.setTitle("错误信息").setMessage("帐号或者密码不能为空，\n请输入后再注册！")
 					.create().show();
-		}else if(11 != phone.length() && !phone.matches("[0-9]+")) {
+		} else if (11 != phone.length() && !phone.matches("[0-9]+")) {
 
 			new AlertDialog.Builder(WelcomeRegister.this)
-					.setIcon(
-							getResources().getDrawable(
-									R.drawable.error_icon))
-					.setTitle("错误信息").setMessage("帐号为11位手机号，\n请检查后重新输入！")				
+					.setIcon(getResources().getDrawable(R.drawable.error_icon))
+					.setTitle("错误信息").setMessage("帐号为11位手机号，\n请检查后重新输入！")
 					.create().show();
-		}else if(!phone.startsWith("13")){
+		} else if (!phone.startsWith("13")) {
 			new AlertDialog.Builder(WelcomeRegister.this)
-			.setIcon(
-					getResources().getDrawable(
-							R.drawable.error_icon))
-			.setTitle("注册失败").setMessage("账号为非法手机号！")				
-			.create().show();
-		}else if(!pwd.equals(cPwd)){
+					.setIcon(getResources().getDrawable(R.drawable.error_icon))
+					.setTitle("注册失败").setMessage("账号为非法手机号！").create().show();
+		} else if (!pwd.equals(cPwd)) {
 			new AlertDialog.Builder(WelcomeRegister.this)
-			.setIcon(
-					getResources().getDrawable(
-							R.drawable.error_icon))
-			.setTitle("注册失败").setMessage("两次输入的密码不相同！")				
-			.create().show();
+					.setIcon(getResources().getDrawable(R.drawable.error_icon))
+					.setTitle("注册失败").setMessage("两次输入的密码不相同！").create().show();
 		}
 
 	}
@@ -72,6 +63,5 @@ public class WelcomeRegister extends Activity {
 	public void register_back(View v) { // 标题栏 返回登录
 		this.finish();
 	}
-	
 
 }

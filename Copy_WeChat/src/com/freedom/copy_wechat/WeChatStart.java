@@ -11,7 +11,7 @@ public class WeChatStart extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wechat_start);
-		//延迟一秒跳转  
+		// 延迟一秒跳转
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {

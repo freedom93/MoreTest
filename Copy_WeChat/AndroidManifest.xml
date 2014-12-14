@@ -12,6 +12,7 @@
         android:icon="@drawable/icon"
         android:label="@string/title_activity_main"
         android:theme="@android:style/Theme.Black.NoTitleBar">
+        <!-- WeChatStart -->
         <activity
             android:name="com.freedom.copy_wechat.WeChatStart"
             android:label="@string/title_activity_main" 
@@ -47,11 +48,13 @@
             android:name="com.freedom.copy_wechat.WeChatMain" 
             android:theme="@style/Anim_style2" 
             android:configChanges="orientation|keyboardHidden|screenSize"/> 
-         <!-- ========================================================= -->   
+         <!-- ========================================================= -->  
+         <!--  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  --> 
          <activity 
              android:name="com.freedom.copy_wechat.WeChatMain2" 
-             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+             android:theme="@style/Anim_style2"
              android:screenOrientation="portrait"/>
+            
     </application>
 
 </manifest>

@@ -50,7 +50,7 @@ public class SlideCutListView extends ListView {
 	 */
 	private int mTouchSlop;
 	/**
-	 *  移除item后的回调接口
+	 * 移除item后的回调接口
 	 */
 	private RemoveListener mRemoveListener;
 	/**
@@ -63,7 +63,6 @@ public class SlideCutListView extends ListView {
 		RIGHT, LEFT;
 	}
 
-
 	public SlideCutListView(Context context) {
 		this(context, null);
 	}
@@ -74,13 +73,16 @@ public class SlideCutListView extends ListView {
 
 	public SlideCutListView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		screenWidth = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getWidth();
+		screenWidth = ((WindowManager) context
+				.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay()
+				.getWidth();
 		scroller = new Scroller(context);
 		mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
 	}
-	
+
 	/**
 	 * 设置滑动删除的回调接口
+	 * 
 	 * @param removeListener
 	 */
 	public void setRemoveListener(RemoveListener removeListener) {
@@ -206,7 +208,7 @@ public class SlideCutListView extends ListView {
 			return true; // 拖动的时候ListView不滚动
 		}
 
-		//否则直接交给ListView来处理onTouchEvent事件
+		// 否则直接交给ListView来处理onTouchEvent事件
 		return super.onTouchEvent(ev);
 	}
 
@@ -216,15 +218,16 @@ public class SlideCutListView extends ListView {
 		if (scroller.computeScrollOffset()) {
 			// 让ListView item根据当前的滚动偏移量进行滚动
 			itemView.scrollTo(scroller.getCurrX(), scroller.getCurrY());
-			
+
 			postInvalidate();
 
 			// 滚动动画结束的时候调用回调接口
 			if (scroller.isFinished()) {
 				if (mRemoveListener == null) {
-					throw new NullPointerException("RemoveListener is null, we should called setRemoveListener()");
+					throw new NullPointerException(
+							"RemoveListener is null, we should called setRemoveListener()");
 				}
-				
+
 				itemView.scrollTo(0, 0);
 				mRemoveListener.removeItem(removeDirection, slidePosition);
 			}
@@ -267,9 +270,8 @@ public class SlideCutListView extends ListView {
 
 	/**
 	 * 
-	 * 当ListView item滑出屏幕，回调这个接口
-	 * 我们需要在回调方法removeItem()中移除该Item,然后刷新ListView
-	 *
+	 * 当ListView item滑出屏幕，回调这个接口 我们需要在回调方法removeItem()中移除该Item,然后刷新ListView
+	 * 
 	 */
 	public interface RemoveListener {
 		public void removeItem(RemoveDirection direction, int position);
