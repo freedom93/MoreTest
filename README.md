@@ -1,11 +1,9 @@
 MoreTest
 =============================================================================
-
 MoreTest is set up for copying excellent apps with a huge amount of the user.
------------------------------------------------------------------------------
 
 First: Copy_WeChat
-
+-----------------------------------------------------------------------------
 WeChat,, not just a mobile phone application, it is a way of life.
 
 More than three hundred million people chat with others by using WeChat
@@ -36,11 +34,9 @@ This is Why I do this.
 
 Come on，Freedom! You will achieve more happiness and fulfillment.
 
-Yes! Fighting!
------------------------------------------------------------------------------
 
 Luminous point 1: Omnipotent ViewHolder and Common Adapter for ListView
-=============================================================================
+-----------------------------------------------------------------------------
 Omnipotent ViewHolder: 
 
 package com.freedom.copy_wechat.common.utils.adapter;
@@ -63,11 +59,11 @@ public class ViewHolder {
  * 既然是通过查找方式，那么ListView肯定不行了，需要一个键值对进行保存，键为控件的Id，值为控件的引用，Map可以达到目的，
 
  * 但是在这里有比Map更好的替代类，android提供的SparseArray类，和Map类似，但是比Map效率，不过键只能为Integer.
---------------------------------------------------------------------------------------------------------------------
 
 Common Adapter for ListView：
 
 package com.freedom.copy_wechat.common.utils.adapter;
+
 public abstract class CommonAdapter<T> extends BaseAdapter {
 }
 
@@ -95,19 +91,21 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
 		};
    
    (RefleshListView) findViewById(R.id.folder_list).setAdapter(adapter);
---------------------------------------------------------------------------------------------------------------------
 
 Luminous point 2: RefleshListView
-====================================================================================================================
-
+--------------------------------------------------------------------------------------------------------------------
 RefleshListView：下拉刷新列表
+
 package com.freedom.copy_wechat.common.utils.adapter;
+
 public class RefleshListView extends ListView implements OnScrollListener{
 
 }
+
 c_adapter_refresh_list_head.xml
 
 c_adapter_list_container.xml
+
  <com.freedom.copy_wechat.common.utils.adapter.RefleshListView
         android:id="@+id/folder_list"
         android:layout_width="match_parent"
@@ -118,7 +116,6 @@ c_adapter_list_container.xml
         android:dividerHeight="0dp"
         android:fadingEdge="none"
         android:headerDividersEnabled="false"/>
---------------------------------------------------------------------------------------------------------------------
 
 
 
