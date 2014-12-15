@@ -14,7 +14,7 @@
         android:theme="@android:style/Theme.Black.NoTitleBar">
         <!-- WeChatStart -->
         <activity
-            android:name="com.freedom.copy_wechat.common.utils.adapter.AdapterActivity"
+            android:name="com.freedom.copy_wechat.test.TestFunctionListActivity"
             android:label="@string/title_main" 
             android:theme="@style/Anim_style2" >
             <intent-filter>
@@ -23,6 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name="com.freedom.copy_wechat.common.utils.adapter.AdapterActivity"  
+            android:theme="@style/Anim_style2"  
+            android:screenOrientation="portrait"/><!--  初始为竖屏 -->
         <activity 
             android:name="com.freedom.copy_wechat.WeChatStart"  
             android:theme="@style/Anim_style2"  
@@ -48,7 +52,7 @@
             android:theme="@style/Anim_style2" 
             android:configChanges="orientation|keyboardHidden|screenSize"/> 
         <activity 
-            android:name="com.freedom.copy_wechat.WeChatMain" 
+            android:name="com.freedom.copy_wechat.main.WeChatMain" 
             android:theme="@style/Anim_style2" 
             android:configChanges="orientation|keyboardHidden|screenSize"/> 
         <activity 
