@@ -10,19 +10,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 /**
  * 通用的ViewHolder
- * ViewHolder的作用:通过convertView.setTag与convertView进行绑定，
- * 然后当convertView复用时，直接从与之对于的ViewHolder(getTag)中拿到convertView布局中的控件，省去了findViewById的时间~
- * 也就是说，实际上们每个convertView会绑定一个ViewHolder对象，这个viewHolder主要用于帮convertView存储布局中的控件。
- * 写出一个通用的ViewHolder，然后对于任意的convertView，提供一个对象让其setTag即可。
- * 针对不同的Item布局，提供一个容器，专门存每个Item布局中的所有控件，而且还要能够查找出来；
- * 既然需要查找，那么ListView肯定是不行了，需要一个键值对进行保存，键为控件的Id，值为控件的引用，相信大家立刻就能想到Map；
- * 但是我们不用Map，因为有更好的替代类，就是我们android提供的SparseArray这个类，
- * 和Map类似，但是比Map效率，不过键只能为Integer.
+ * ViewHolder的作用:通过convertView.setTag与convertView进行绑定
+ * 当convertView复用时，直接从与之对于的ViewHolder(getTag)中拿到convertView布局中的控件，省去了findViewById的时间。
+ * 实际上们每个convertView会绑定一个ViewHolder对象，viewHolder主要是帮convertView存储布局中的控件。
+ * 因此抽出一个通用的ViewHolder完全有可能，对于任意的convertView，提供一个对象让其setTag即可。
+ * 针对不同的Item布局，提供一个容器，专门存每个Item布局中的所有控件，而且还能根据控件的Id通过getView(int viewId)方法查找出来；
+ * 既然是通过查找方式，那么ListView肯定不行了，需要一个键值对进行保存，键为控件的Id，值为控件的引用，Map可以达到目的，
+ * 但是在这里有比Map更好的替代类，android提供的SparseArray类，和Map类似，但是比Map效率，不过键只能为Integer.
  */
 public class ViewHolder {
 	
 	/** 
-     * 使用SparseArray<View>用于存储与之对于的convertView的所有的控件，
+     * 使用SparseArray<View>用于存储convertView的所有的控件，
      * 当需要拿这些控件时，通过getView(id)进行获取；
      * SparseArray和Map类似，但比Map有效率，键值只能是Integer
      */  

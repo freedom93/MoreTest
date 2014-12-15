@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 /**
- * 通用的Adapter：，
+ * 通用的Adapter：
  * Adapter一般需要保持一个List对象，存储一个Bean的集合，
  * 不同的ListView，Bean肯定是不同的，
  * 这个CommonAdapter肯定需要支持泛型，内部维持一个List<T>
