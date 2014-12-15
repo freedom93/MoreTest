@@ -1,4 +1,4 @@
-package com.freedom.copy_wechat.utils;
+package com.freedom.copy_wechat.main2;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,7 +22,7 @@ public class SelectAddPopupWindow extends PopupWindow {
 		super(context);
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		mMenuView = inflater.inflate(R.layout.addxml, null);
+		mMenuView = inflater.inflate(R.layout.main2_addxml, null);
 
 		int h = context.getWindowManager().getDefaultDisplay().getHeight();
 		int w = context.getWindowManager().getDefaultDisplay().getWidth();

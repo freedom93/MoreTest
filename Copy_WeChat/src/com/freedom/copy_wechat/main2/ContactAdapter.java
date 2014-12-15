@@ -1,4 +1,4 @@
-package com.freedom.copy_wechat.utils;
+package com.freedom.copy_wechat.main2;
 
 import java.util.ArrayList;
 
@@ -44,7 +44,7 @@ public class ContactAdapter extends BaseAdapter {
 		H h = null;
 		if (view == null) {
 			h = new H();
-			view = LayoutInflater.from(context).inflate(R.layout.contacts,
+			view = LayoutInflater.from(context).inflate(R.layout.main2_contacts,
 					parent, false);
 			h.pic = (ImageView) view.findViewById(R.id.tx1);
 			h.name = (TextView) view.findViewById(R.id.tx2);

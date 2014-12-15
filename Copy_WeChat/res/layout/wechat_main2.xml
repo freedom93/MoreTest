@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical" >
 
-        <include layout="@layout/top" />
+        <include layout="@layout/main2_top" />
     </LinearLayout>
 
     <LinearLayout
@@ -21,7 +21,7 @@
         android:layout_marginTop="50dp"
         android:orientation="vertical" >
 
-        <com.freedom.copy_wechat.utils.MyScrollLayout
+        <com.freedom.copy_wechat.main2.MyScrollLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/ScrollLayout"
             android:layout_width="fill_parent"
@@ -29,7 +29,7 @@
             android:layout_alignParentBottom="true"
             android:layout_below="@id/llayout" >
 
-            <com.freedom.copy_wechat.utils.MyFrame
+            <com.freedom.copy_wechat.main2.MyFrame
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white" >
@@ -42,7 +42,7 @@
                     android:divider="@drawable/reader_item_divider"
                     android:listSelector="@android:color/transparent" >
                 </ListView>
-            </com.freedom.copy_wechat.utils.MyFrame>
+            </com.freedom.copy_wechat.main2.MyFrame>
 
             <FrameLayout
                 android:layout_width="fill_parent"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white" >
 
-                <include layout="@layout/find" />
+                <include layout="@layout/main2_find" />
             </FrameLayout>
 
             <FrameLayout
@@ -72,11 +72,11 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white" >
 
-                <include layout="@layout/wo" />
+                <include layout="@layout/main2_wo" />
             </FrameLayout>
-        </com.freedom.copy_wechat.utils.MyScrollLayout>
+        </com.freedom.copy_wechat.main2.MyScrollLayout>
     </LinearLayout>
 
-    <include layout="@layout/bottom" />
+    <include layout="@layout/main2_bottom" />
 
 </RelativeLayout>

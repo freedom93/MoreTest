@@ -10,12 +10,12 @@
  	<uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:icon="@drawable/icon"
-        android:label="@string/title_activity_main"
+        android:label="@string/title_main"
         android:theme="@android:style/Theme.Black.NoTitleBar">
         <!-- WeChatStart -->
         <activity
-            android:name="com.freedom.copy_wechat.WeChatStart"
-            android:label="@string/title_activity_main" 
+            android:name="com.freedom.copy_wechat.main.WeChatStart"
+            android:label="@string/title_main" 
             android:theme="@style/Anim_style2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,12 +48,38 @@
             android:name="com.freedom.copy_wechat.WeChatMain" 
             android:theme="@style/Anim_style2" 
             android:configChanges="orientation|keyboardHidden|screenSize"/> 
-         <!-- ========================================================= -->  
-         <!--  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  --> 
-         <activity 
-             android:name="com.freedom.copy_wechat.WeChatMain2" 
+        <activity 
+            android:name="com.freedom.copy_wechat.main.ChatActivity"  
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity 
+            android:name="com.freedom.copy_wechat.main.ShakeActivity"  
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity 
+            android:name="com.freedom.copy_wechat.virtualdata.Infofengnv"  
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity 
+            android:name="com.freedom.copy_wechat.main.Exit" 
+            android:theme="@style/MyDialogStyle" />        
+        <activity 
+            android:name="com.freedom.copy_wechat.main.ExitFromSettings" 
+            android:theme="@style/MyDialogStyleBottom" /> 
+        <activity 
+            android:name="com.freedom.copy_wechat.virtualdata.InfofengnvHead" 
+            android:theme="@style/HeadScale" />
+        <activity 
+            android:name="LoadingActivity" 
+            android:theme="@style/MyDialogStyle" />             
+        <activity 
+            android:name="com.freedom.copy_wechat.main.MainTopRightDialog" 
+            android:theme="@style/MyDialogStyleTop" /> 
+         
+        <!-- ========================================================= -->  
+        <!--  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  --> 
+        <activity 
+             android:name="com.freedom.copy_wechat.main2.WeChatMain2" 
              android:theme="@style/Anim_style2"
              android:screenOrientation="portrait"/>
+         
             
     </application>
 

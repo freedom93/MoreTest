@@ -12,7 +12,7 @@ public class LoadingLogin extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.loading);
+		setContentView(R.layout.main2_loading);
 
 		new Handler().postDelayed(new Runnable() {
 			@Override

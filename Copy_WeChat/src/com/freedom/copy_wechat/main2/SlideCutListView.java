@@ -1,4 +1,4 @@
-package com.freedom.copy_wechat.utils;
+package com.freedom.copy_wechat.main2;
 
 import android.content.Context;
 import android.util.AttributeSet;

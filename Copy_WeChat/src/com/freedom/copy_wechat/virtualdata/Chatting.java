@@ -1,6 +1,6 @@
-package com.freedom.copy_wechat.utils;
+package com.freedom.copy_wechat.virtualdata;
 
-public class HuiHua {
+public class Chatting {
 	private String weixinID1;
 	private String weixinID2;
 	private String name1;

@@ -1,5 +1,7 @@
 package com.freedom.copy_wechat;
 
+import com.freedom.copy_wechat.main2.WeChatMain2;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

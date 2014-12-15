@@ -1,4 +1,4 @@
-package com.freedom.copy_wechat.utils;
+package com.freedom.copy_wechat.main2;
 
 import java.util.ArrayList;
 
@@ -11,12 +11,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.freedom.copy_wechat.R;
+import com.freedom.copy_wechat.virtualdata.Chatting;
 
-public class HuihuaAdapter extends BaseAdapter {
+public class ChattingAdapter extends BaseAdapter {
 	private Context context;
-	private ArrayList<HuiHua> list = new ArrayList<HuiHua>();
+	private ArrayList<Chatting> list = new ArrayList<Chatting>();
 
-	public HuihuaAdapter(Context context, ArrayList<HuiHua> list) {
+	public ChattingAdapter(Context context, ArrayList<Chatting> list) {
 		this.context = context;
 		this.list = list;
 	}
@@ -40,11 +41,11 @@ public class HuihuaAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View view, ViewGroup parent) {
-		HuiHua hh = list.get(position);
+		Chatting hh = list.get(position);
 		H h = null;
 		if (view == null) {
 			h = new H();
-			view = LayoutInflater.from(context).inflate(R.layout.chat, parent,
+			view = LayoutInflater.from(context).inflate(R.layout.main2_chat, parent,
 					false);
 			h.pic = (ImageView) view.findViewById(R.id.l1);
 			h.name = (TextView) view.findViewById(R.id.name);
