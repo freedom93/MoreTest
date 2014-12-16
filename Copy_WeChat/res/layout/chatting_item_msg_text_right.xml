@@ -33,7 +33,7 @@
             android:layout_height="52dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:background="@drawable/headshow10"
+            android:background="@drawable/freedom"
             android:focusable="false" />
 
         <TextView

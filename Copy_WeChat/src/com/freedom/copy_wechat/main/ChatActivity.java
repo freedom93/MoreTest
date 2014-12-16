@@ -48,24 +48,20 @@ public class ChatActivity extends Activity implements OnClickListener {
 		mEditTextContent = (EditText) findViewById(R.id.et_sendmessage);
 	}
 
-	private String[] msgArray = new String[] { "Hello", "嗯哈", "去逛街？", "很忙",
-			"什么时候不忙？", "逛街的话都很忙", "疯子！", "疯子！" };
+	private String[] msgArray = new String[] { "Hello", "world", "上班ing?", "对呀！", "累吧？", "还好……" };
 
-	private String[] dataArray = new String[] { "2014-10-21 18:00",
-			"2014-10-21 18:10", "2014-10-21 18:11", "2014-10-21 18:20",
-			"2014-10-21 18:30", "2014-10-21 18:35", "2014-10-21 18:40",
-			"2014-10-21 18:50" };
-	private final static int COUNT = 8;
+	private String[] dataArray = new String[] { "2014-12-21 18:40","2014-12-21 18:44","2014-12-21 18:46","2014-12-21 18:48","2014-12-21 18:50","2014-12-21 18:52" };
+	private final static int COUNT = 6;
 
 	public void initData() {
 		for (int i = 0; i < COUNT; i++) {
 			ChatMsgEntity entity = new ChatMsgEntity();
 			entity.setDate(dataArray[i]);
 			if (i % 2 == 0) {
-				entity.setName("疯女");
+				entity.setName("Anna");
 				entity.setMsgType(true);
 			} else {
-				entity.setName("test");
+				entity.setName("freedom");
 				entity.setMsgType(false);
 			}
 
@@ -80,7 +76,6 @@ public class ChatActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btn_send:
 			send();
@@ -96,7 +91,7 @@ public class ChatActivity extends Activity implements OnClickListener {
 		if (contString.length() > 0) {
 			ChatMsgEntity entity = new ChatMsgEntity();
 			entity.setDate(getDate());
-			entity.setName("test");
+			entity.setName("freedom");
 			entity.setMsgType(false);
 			entity.setText(contString);
 
@@ -113,8 +108,8 @@ public class ChatActivity extends Activity implements OnClickListener {
 		Calendar c = Calendar.getInstance();
 
 		String year = String.valueOf(c.get(Calendar.YEAR));
-		String month = String.valueOf(c.get(Calendar.MONTH));
-		String day = String.valueOf(c.get(Calendar.DAY_OF_MONTH) + 1);
+		String month = String.valueOf(c.get(Calendar.MONTH)+1);
+		String day = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
 		String hour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));
 		String mins = String.valueOf(c.get(Calendar.MINUTE));
 
@@ -125,7 +120,7 @@ public class ChatActivity extends Activity implements OnClickListener {
 		return sbBuffer.toString();
 	}
 
-	public void head_xiaohei(View v) { // 标题栏 返回按钮
+	public void head_chat(View v) { // 标题栏 返回按钮
 		Intent intent = new Intent(ChatActivity.this, Infofengnv.class);
 		startActivity(intent);
 	}

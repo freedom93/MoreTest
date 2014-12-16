@@ -11,7 +11,7 @@ public class Infofengnv extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.info_fengnv);
+		setContentView(R.layout.info_anna);
 	}
 
 	public void btn_back(View v) { // 标题栏 返回按钮
