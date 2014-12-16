@@ -29,7 +29,8 @@ public class AdapterActivity extends Activity implements
 		// adapter = new MyAdapter(this, data);
 		// mList.setAdapter(adapter);
 		// 简化过得CommonAdapter已经可以不需要单独写一个Adapter了，直接在Activity里写一个匿名内部类即可
-		adapter = new CommonAdapter<String>(this, data, R.layout.c_adapter_list_item) {
+		adapter = new CommonAdapter<String>(this, data,
+				R.layout.c_adapter_list_item) {
 
 			@Override
 			public void convert(ViewHolder holder, String item) {

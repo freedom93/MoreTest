@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.freedom.copy_wechat.R;
 
-public class RefleshListView extends ListView implements OnScrollListener{
+public class RefleshListView extends ListView implements OnScrollListener {
 
 	public interface IListViewState {
 		int LVS_NORMAL = 0; // 普通状态
@@ -94,14 +94,17 @@ public class RefleshListView extends ListView implements OnScrollListener{
 
 	// 初始化headview试图
 	private void initHeadView(Context context) {
-		mHeadView = LayoutInflater.from(context).inflate(R.layout.c_adapter_refresh_list_head, null);
+		mHeadView = LayoutInflater.from(context).inflate(
+				R.layout.c_adapter_refresh_list_head, null);
 
 		mImageView = (ImageView) mHeadView.findViewById(R.id.icon_reflesh);
 		mImageView.setMinimumWidth(60);
 
-		mRefreshTextview = (TextView) mHeadView.findViewById(R.id.head_reflesh_tips);
+		mRefreshTextview = (TextView) mHeadView
+				.findViewById(R.id.head_reflesh_tips);
 
-		mLastUpdateTextView = (TextView) mHeadView.findViewById(R.id.head_reflesh_lastUpdated);
+		mLastUpdateTextView = (TextView) mHeadView
+				.findViewById(R.id.head_reflesh_lastUpdated);
 
 		measureView(mHeadView);
 		mHeadContentHeight = mHeadView.getMeasuredHeight();
@@ -296,7 +299,7 @@ public class RefleshListView extends ListView implements OnScrollListener{
 		}
 			break;
 		case IListViewState.LVS_RELEASE_REFRESH: {
-			Log.i("test","convert to IListViewState.LVS_RELEASE_REFRESH");
+			Log.i("test", "convert to IListViewState.LVS_RELEASE_REFRESH");
 			mImageView.setVisibility(View.VISIBLE);
 			mRefreshTextview.setText("松开加载更多");
 			mImageView.clearAnimation();

@@ -10,29 +10,35 @@
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:clickable="true"
+        	android:gravity="center_vertical"
+        	android:onClick="btn_friends" 
             android:paddingBottom="12dip"
             android:paddingLeft="10dip"
-            android:paddingTop="29dip" >
+            android:paddingTop="12dip" >
 
             <ImageView
+                android:id="@+id/find_icon_friends"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:scaleType="fitCenter"
+                android:layout_alignParentLeft="true"
                 android:src="@drawable/find_more_friend_photograph_icon" />
 
             <TextView
+                android:id="@+id/find_txt_friends"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/find_icon_friends"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="10dp"
-                android:gravity="center"
                 android:text="朋友圈"
                 android:textColor="@color/black"
                 android:textSize="15dip" />
-        </LinearLayout>
+            
+        </RelativeLayout>
 
         <TextView
             android:layout_width="fill_parent"
@@ -72,10 +78,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:clickable="true"
+        	android:gravity="center_vertical"
+        	android:onClick="btn_shake" 
             android:paddingBottom="12dip"
             android:paddingLeft="10dip"
             android:paddingTop="12dip" >
-
 
             <ImageView
                 android:layout_width="36dp"

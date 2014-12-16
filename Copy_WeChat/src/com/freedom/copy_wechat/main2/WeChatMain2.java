@@ -1,6 +1,7 @@
 package com.freedom.copy_wechat.main2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,8 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.freedom.copy_wechat.R;
-import com.freedom.copy_wechat.R.id;
-import com.freedom.copy_wechat.R.layout;
+import com.freedom.copy_wechat.main.ShakeActivity;
 import com.freedom.copy_wechat.virtualdata2.VirtualData2;
 
 public class WeChatMain2 extends Activity implements OnViewChangeListener,
@@ -86,7 +86,6 @@ public class WeChatMain2 extends Activity implements OnViewChangeListener,
 		});
 	}
 
-	
 	public void uploadImage(final Activity context) {
 		menuWindow = new SelectAddPopupWindow(WeChatMain2.this, itemsOnClick);
 		// 显示窗口
@@ -155,4 +154,8 @@ public class WeChatMain2 extends Activity implements OnViewChangeListener,
 		return super.onKeyDown(keyCode, event);
 	}
 
+	public void btn_shake(View v) { // 手机摇一摇
+		Intent intent = new Intent(WeChatMain2.this, ShakeActivity.class);
+		startActivity(intent);
+	}
 }

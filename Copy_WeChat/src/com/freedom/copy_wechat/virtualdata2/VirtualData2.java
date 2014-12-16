@@ -7,7 +7,7 @@ import com.freedom.copy_wechat.main2.ContactP;
 import com.freedom.copy_wechat.virtualdata.Chatting;
 
 public class VirtualData2 {
-	
+
 	public static ArrayList<ContactP> getContact() {
 		ArrayList<ContactP> hcList = new ArrayList<ContactP>();
 		ContactP c2 = new ContactP();
@@ -93,7 +93,6 @@ public class VirtualData2 {
 
 		return hcList;
 	}
-
 
 	public static ArrayList<Chatting> getHuahui() {
 		ArrayList<Chatting> hhList = new ArrayList<Chatting>();

@@ -37,7 +37,8 @@ public class TestFunctionListActivity extends Activity implements
 		setContentView(R.layout.c_adapter_list_container);
 		mList = (RefleshListView) findViewById(R.id.folder_list);
 		data = new ArrayList<String>(Arrays.asList("main", "main2", "adapter"));
-		adapter = new CommonAdapter<String>(this, data, R.layout.c_adapter_list_item) {
+		adapter = new CommonAdapter<String>(this, data,
+				R.layout.c_adapter_list_item) {
 
 			@Override
 			public void convert(ViewHolder holder, String item) {
@@ -52,26 +53,30 @@ public class TestFunctionListActivity extends Activity implements
 		mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
-			int position, long id) {
+					int position, long id) {
 				switch (position) {
 				case 0:
-					startActivity(new Intent(TestFunctionListActivity.this, WeChatStart.class));
+					startActivity(new Intent(TestFunctionListActivity.this,
+							WeChatStart.class));
 					break;
 				case 1:
-					startActivity(new Intent(TestFunctionListActivity.this, WeChatMain.class));
+					startActivity(new Intent(TestFunctionListActivity.this,
+							WeChatMain.class));
 					break;
 				case 2:
-					startActivity(new Intent(TestFunctionListActivity.this, WeChatMain2.class));
+					startActivity(new Intent(TestFunctionListActivity.this,
+							WeChatMain2.class));
 					break;
 				case 3:
-					startActivity(new Intent(TestFunctionListActivity.this, AdapterActivity.class));
+					startActivity(new Intent(TestFunctionListActivity.this,
+							AdapterActivity.class));
 					break;
 				default:
-					startActivity(new Intent(TestFunctionListActivity.this, TestFunctionListActivity.class));
+					startActivity(new Intent(TestFunctionListActivity.this,
+							TestFunctionListActivity.class));
 					break;
 				}
-				
-			
+
 			}
 		});
 
@@ -96,7 +101,7 @@ public class TestFunctionListActivity extends Activity implements
 			}
 			int index = 0;
 			index++;
-			//data.add("add"+index);
+			// data.add("add"+index);
 
 			return null;
 		}

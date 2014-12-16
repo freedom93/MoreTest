@@ -49,12 +49,12 @@ public class ChatActivity extends Activity implements OnClickListener {
 	}
 
 	private String[] msgArray = new String[] { "Hello", "嗯哈", "去逛街？", "很忙",
-			"什么时候不忙？", "逛街的话都很忙",  "疯子！", "疯子！" };
+			"什么时候不忙？", "逛街的话都很忙", "疯子！", "疯子！" };
 
 	private String[] dataArray = new String[] { "2014-10-21 18:00",
 			"2014-10-21 18:10", "2014-10-21 18:11", "2014-10-21 18:20",
 			"2014-10-21 18:30", "2014-10-21 18:35", "2014-10-21 18:40",
-			"2014-10-21 18:50"};
+			"2014-10-21 18:50" };
 	private final static int COUNT = 8;
 
 	public void initData() {
