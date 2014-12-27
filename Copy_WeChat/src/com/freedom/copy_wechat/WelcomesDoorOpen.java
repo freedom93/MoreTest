@@ -1,7 +1,5 @@
 package com.freedom.copy_wechat;
 
-import com.freedom.copy_wechat.main2.WeChatMain2;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +11,8 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.freedom.copy_wechat.main.WeChatMain;
 
 public class WelcomesDoorOpen extends Activity {
 
@@ -66,10 +66,10 @@ public class WelcomesDoorOpen extends Activity {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				startActivity(new Intent(WelcomesDoorOpen.this,
-						WeChatMain2.class));
-				// startActivity(new Intent(WelcomesDoorOpen.this,
-				// WeChatMain.class));
+//				startActivity(new Intent(WelcomesDoorOpen.this,
+//						WeChatMain2.class));
+				 startActivity(new Intent(WelcomesDoorOpen.this,
+				 WeChatMain.class));
 
 				WelcomesDoorOpen.this.finish();
 			}

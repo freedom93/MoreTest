@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 import com.freedom.copy_wechat.R;
 import com.freedom.copy_wechat.WeChatStart;
-import com.freedom.copy_wechat.R.id;
-import com.freedom.copy_wechat.R.layout;
 import com.freedom.copy_wechat.common.utils.adapter.AdapterActivity;
 import com.freedom.copy_wechat.common.utils.adapter.CommonAdapter;
 import com.freedom.copy_wechat.common.utils.adapter.RefleshListView;
@@ -36,7 +34,7 @@ public class TestFunctionListActivity extends Activity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.c_adapter_list_container);
 		mList = (RefleshListView) findViewById(R.id.folder_list);
-		data = new ArrayList<String>(Arrays.asList("main", "main2", "adapter"));
+		data = new ArrayList<String>(Arrays.asList("main0","main1", "main2"));//, "adapter"
 		adapter = new CommonAdapter<String>(this, data,
 				R.layout.c_adapter_list_item) {
 
@@ -55,26 +53,23 @@ public class TestFunctionListActivity extends Activity implements
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				switch (position) {
-				case 0:
+				case 1:
 					startActivity(new Intent(TestFunctionListActivity.this,
 							WeChatStart.class));
 					break;
-				case 1:
+				case 2:
 					startActivity(new Intent(TestFunctionListActivity.this,
 							WeChatMain.class));
 					break;
-				case 2:
+				case 3:
 					startActivity(new Intent(TestFunctionListActivity.this,
 							WeChatMain2.class));
 					break;
-				case 3:
+				default:
 					startActivity(new Intent(TestFunctionListActivity.this,
 							AdapterActivity.class));
 					break;
-				default:
-					startActivity(new Intent(TestFunctionListActivity.this,
-							TestFunctionListActivity.class));
-					break;
+			
 				}
 
 			}
@@ -89,6 +84,7 @@ public class TestFunctionListActivity extends Activity implements
 
 	}
 
+	int index = 2;
 	class RefreshDataAsynTask extends AsyncTask<Void, Void, Void> {
 
 		@Override
@@ -99,10 +95,10 @@ public class TestFunctionListActivity extends Activity implements
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			int index = 0;
 			index++;
-			// data.add("add"+index);
-
+			if(index<4){
+				data.add("main"+index);
+			}
 			return null;
 		}
 
