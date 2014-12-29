@@ -122,10 +122,13 @@ Luminous point 3: BadgeView
 BadgeView是一个开源组件
 主要继承了TextView，实际上就是一个TextView，底层放了一个label，
 可以自定义背景图，自定义背景颜色，是否显示，显示进入的动画效果以及显示的位置等等；
-故通常用来显示提示消息个数等，例如QQ的未读消息个数的带数字的小红点就是它了！
+
+
 源码：package com.jauker.widget.BadgeView
 具体使用方法：
+
 private BadgeView mBadgeView;
+
 //test badgeView
 		TextView top_middle = (TextView)findViewById(R.id.top_middle);
 		mBadgeView = new BadgeView(TestFunctionListActivity.this,top_middle);
